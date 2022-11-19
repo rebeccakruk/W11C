@@ -13,26 +13,83 @@ function pokemonSelector(event){
 }
 
 
-
+function battleNumbers (max, min){
+    // generate a random number
+    if(min === undefined || min === '' || min === null){
+        min = 0;
+    }
+    return Math.floor(Math.random() * (max - min) + min);
+}
 
 
 let pkm1 = {
     firstName: `Totadile`,
     healthPoints: 100,
-    attack: [`punch`, 'kick', `slap`, `tackle`],
-    imageUrl: "https://64.media.tumblr.com/f4ca60473857e55041faf8fdb6a057f4/7347a361139ff768-48/s500x750/b15fe2bc3c1aa3ad43cf6345b2b1755953906ba5.png"
+    imageUrl: `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAF3X-rWD55IST7lDhqco6jxolCe9deiDihg&usqp=CAU`,
+    attack : [
+        {
+            name : "water",
+            health : battleNumbers (5, 10)
+        },
+        {
+            name : "spray",
+            health : battleNumbers (10, 20)
+        },
+        {
+            name : "punch",
+            health : battleNumbers (10, 15)
+        },
+        {
+            name : "tackle",
+            health : battleNumbers (10, 20)
+        },
+    ]
 }
 let pkm2 = {
     firstName: `Cyndaquil`,
     healthPoints: 100,
-    attack: [`punch`, `kick`, `slap`, `tackle`],
-    imageUrl: `https://oyster.ignimgs.com/mediawiki/apis.ign.com/pokemon-black-and-white/4/40/Pokemans_155.gif" alt="Cyndaquil`
+    imageUrl: "https://static.pokemonpets.com/images/monsters-images-800-800/155-Cyndaquil.webp",
+    attack : [
+        {
+            name : "fire",
+            health : battleNumbers (5, 10)
+        },
+        {
+            name : "roast",
+            health : battleNumbers (10, 20)
+        },
+        {
+            name : "punch",
+            health : battleNumbers (10, 15)
+        },
+        {
+            name : "tackle",
+            health : battleNumbers (10, 20)
+        },
+    ]
 }
 let pkm3 = {
     firstName : `Chikorita`,
     healthPoints : 100,
-    attack : [`punch`, `kick`, `slap`, `tackle`],
-    imageUrl : `https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/57cfa540-b68e-4df7-97f0-ea9cb50dc02f/dcmh7w2-6daeeba4-4ba3-45e4-bfca-a6d3592b7673.png" alt="Chikorita`
+    imageUrl : `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgTxVhEk3spQL61CJKSGE40nutrb7MfqH4EQ&usqp=CAU`,
+    attack : [
+        {
+            name : "Grass Blade",
+            health : battleNumbers (5, 10)
+        },
+        {
+            name : "Vine Whip",
+            health : battleNumbers (10, 20)
+        },
+        {
+            name : "punch",
+            health : battleNumbers (10, 15)
+        },
+        {
+            name : "tackle",
+            health : battleNumbers (10, 20)
+        },
+    ]
 }
 
 
@@ -58,3 +115,12 @@ let selection = []
 pokemon1.querySelector(`button`).addEventListener(`click`, pokemonSelector);
 pokemon2.querySelector(`button`).addEventListener(`click`, pokemonSelector);
 pokemon3.querySelector(`button`).addEventListener(`click`, pokemonSelector);
+
+let Pkm1Json = JSON.stringify(pkm1);
+cookies.set(`pkm1`, enemyJson);
+
+let Pkm2Json = JSON.stringify(pkm2);
+cookies.set(`pkm2`, enemyJson);
+
+let Pkm3Json = JSON.stringify(pkm3);
+cookies.set(`pkm3`, enemyJson);

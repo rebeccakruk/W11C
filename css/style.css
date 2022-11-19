@@ -1,3 +1,24 @@
+body{
+    background-image: url("https://imgs.search.brave.com/oS12dNWVLoJwvugchJA74eoQ11ToalOqjDQ9XK719Mw/rs:fit:800:480:1/g:ce/aHR0cDovL29yaWcx/MC5kZXZpYW50YXJ0/Lm5ldC81ZDJmL2Yv/MjAxNC8yOTMvNC81/L3Bva2Vtb25feF9h/bmRfeV9iYXR0bGVf/YmFja2dyb3VuZF9l/bGVjdHJpY190ZXJy/YWluX2J5X3Bob2Vu/aXhvZmxpZ2h0OTIt/ZDgzbDdvdS5wbmc") ;
+    font-family: 'Kanit', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    overflow: hidden;
+    background-repeat: repeat-x;
+    background-size: 1000px;
+}
+
+
+#logo{
+    display: grid;
+    justify-items: center;
+    margin-bottom: 80px;
+}
+
 img {
     height: 20vh;
+}
+
+#mainContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
