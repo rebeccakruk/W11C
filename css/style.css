@@ -4,7 +4,7 @@ body{
     font-family: 'Open Sans', sans-serif;
     overflow: hidden;
     background-repeat: repeat-x;
-    background-size: 1000px;
+    background-size: 1500px;
 }
 
 
@@ -21,4 +21,23 @@ img {
 #mainContainer{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+}
+
+#playerHp #enemyHp{
+    position: relative;
+    height: 20px;
+    width: 250px;
+    border: black 2px solid;
+    border-radius: 2px;
+    margin-right: 30px;
+    display: inline-block;
+}
+
+#playerHpBar, #enemyHpBar{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* background: blue; */
 }

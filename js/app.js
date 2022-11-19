@@ -1,14 +1,14 @@
 function pokemonSelector(event){
     let parent = event.target.parentElement;
     if(parent.id == `pkmChoice1`){
-        let pkmJSON = JSON.stringify(pkm1);
-        Cookies.set(`pkmSelection`, pkmJSON)
+        let pkmJson = JSON.stringify(pkm1);
+        Cookies.set(`pkmSelection`, pkmJson)
     } else if (parent.id == `pkmChoice2`){
-        let pkmJSON = JSON.stringify(pkm2);
-        Cookies.set(`pkmSelection`, pkmJSON)
+        let pkmJson = JSON.stringify(pkm2);
+        Cookies.set(`pkmSelection`, pkmJson)
     } else if (parent.id == `pkmChoice3`){
-        let pkmJSON = JSON.stringify(pkm3);
-        Cookies.set(`pkmSelection`, pkmJSON)
+        let pkmJson = JSON.stringify(pkm3);
+        Cookies.set(`pkmSelection`, pkmJson)
     }
 }
 
@@ -25,7 +25,7 @@ function battleNumbers (max, min){
 let pkm1 = {
     firstName: `Totadile`,
     healthPoints: 100,
-    imageUrl: `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAF3X-rWD55IST7lDhqco6jxolCe9deiDihg&usqp=CAU`,
+    imageUrl: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/158.png",
     attack : [
         {
             name : "water",
@@ -71,7 +71,7 @@ let pkm2 = {
 let pkm3 = {
     firstName : `Chikorita`,
     healthPoints : 100,
-    imageUrl : `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgTxVhEk3spQL61CJKSGE40nutrb7MfqH4EQ&usqp=CAU`,
+    imageUrl : `https://assets.pokemon.com/assets/cms2/img/pokedex/full/152.png`,
     attack : [
         {
             name : "Grass Blade",
@@ -95,9 +95,10 @@ let pkm3 = {
 
 
 let pokemon1 = document.getElementById(`pkmChoice1`);
-pokemon1.insertAdjacentHTML(`afterbegin`, `<img src="${pkm1.imageUrl}" alt="Totadile>`);
+pokemon1.insertAdjacentHTML(`afterbegin`, `<img src="${pkm1.imageUrl}" alt="Todotile">`);
 pokemon1.insertAdjacentHTML(`afterbegin`, `<p>Name: ${pkm1.firstName}</p>`);
-pokemon1.insertAdjacentHTML(`afterbegin`, `<p>Health:${pkm1.healthPoints}</p>`);
+pokemon1.insertAdjacentHTML(`afterbegin`, `<p>Health: ${pkm1.healthPoints}</p>`);
+
 
 
 let pokemon2 = document.getElementById(`pkmChoice2`);
@@ -112,15 +113,15 @@ pokemon3.insertAdjacentHTML(`afterbegin`, `<p>Name: ${pkm3.firstName}</p>`);
 pokemon3.insertAdjacentHTML(`afterbegin`, `<p>Health: ${pkm3.healthPoints}</p>`);
 
 let selection = []
-pokemon1.querySelector(`button`).addEventListener(`click`, pokemonSelector);
-pokemon2.querySelector(`button`).addEventListener(`click`, pokemonSelector);
-pokemon3.querySelector(`button`).addEventListener(`click`, pokemonSelector);
+pokemon1.querySelector(`a`).addEventListener(`click`, pokemonSelector);
+pokemon2.querySelector(`a`).addEventListener(`click`, pokemonSelector);
+pokemon3.querySelector(`a`).addEventListener(`click`, pokemonSelector);
 
-let Pkm1Json = JSON.stringify(pkm1);
-cookies.set(`pkm1`, enemyJson);
+// let Pkm1Json = JSON.stringify(pkm1);
+// Cookies.set(`pkm1`, enemyJson);
 
-let Pkm2Json = JSON.stringify(pkm2);
-cookies.set(`pkm2`, enemyJson);
+// let Pkm2Json = JSON.stringify(pkm2);
+// Cookies.set(`pkm2`, enemyJson);
 
-let Pkm3Json = JSON.stringify(pkm3);
-cookies.set(`pkm3`, enemyJson);
+// let Pkm3Json = JSON.stringify(pkm3);
+// Cookies.set(`pkm3`, enemyJson);
